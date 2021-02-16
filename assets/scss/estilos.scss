@@ -1,0 +1,194 @@
+//@import "././node_modules/bootstrap/scss/bootstrap.scss";
+
+/* ESTILOS BASICOS*/
+
+$color-logo: #DF806F;
+$rosa: #fde8cd;
+$blanco1: #FFFFFF;
+$blanco2: #EDEDED;
+
+
+body {
+  background-color: $rosa;
+  margin: 0;
+  h2 {
+    color: $color-logo;
+  }
+  main {
+    padding-top: 10px;
+    margin: 0;
+  }
+  header {
+    padding-bottom: 50px;
+  }
+}
+//boton carrito
+#contenedor-boton {
+  padding-left: 70%;
+
+  
+}
+
+
+
+
+// ESTILOS INDEX
+
+
+.estrellita {
+  display: inline;
+  text-decoration: none;
+}
+
+.card-deck {
+  padding-bottom: 40px;
+  .ficha-prodcuto {
+  margin: 5% 0%;
+  .div-boton-comprar {
+    padding-left: 38%;
+  }
+  .rating {
+    padding-left: 0%;
+  }
+}
+}
+
+@media (max-width: 1175px) {
+  body {
+    margin: 0;
+  }
+}
+@media (max-width: 989px) {
+  #contenedor-boton {
+    padding: 1% 0 0 0;
+    margin: 0%;
+  }	
+}
+//ESTILOS CHECKOUT
+
+// .card {
+//     max-width: 1000px;
+//     margin: 2vh
+// }
+
+.card-top {
+    padding: 0.7rem 5rem;
+    a {  
+        float: left;
+        margin-top: 0.7rem
+    }
+}
+
+
+// .card-body {
+//     padding: 0 5rem 5rem 5rem;
+  
+//     background-size: cover;
+//     background-repeat: no-repeat
+// }
+
+@media(max-width:768px) {
+    .card-body {
+        padding: 0 1rem 1rem 1rem
+    }
+    .card-top {
+        padding: 0.7rem 1rem
+    }
+}
+
+.row {
+    margin: 0
+}
+
+.upper {
+    padding: 1rem 0;
+    justify-content: space-evenly
+}
+
+.icons {
+    margin-left: auto
+}
+
+form span {
+    color: rgb(179, 179, 179)
+}
+
+form {
+    padding: 2vh 0
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+.left {
+    background-color: #ffffff;
+    padding: 2vh
+}
+
+.left img {
+    width: 2rem
+}
+
+.left .col-4 {
+    padding-left: 0
+}
+
+.right .item {
+    padding: 0.3rem 0
+}
+
+.right {
+    background-color: #ffffff;
+    padding: 2vh
+}
+
+.col-8 {
+    padding: 0 1vh
+}
+
+.lower {
+    line-height: 3;
+    b {
+        font-size: larger;
+    }
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none
+}
+
+.btn:hover {
+    color: white
+}
+
+a {
+    color: black
+}
+
+a:hover {
+    color: black;
+    text-decoration: none
+}
+
+input[type=checkbox] {
+    width: unset;
+    margin-bottom: unset
+}
+
+

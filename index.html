@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breakiss</title>
+    <link rel="shortcut icon" href="assets/imagenes/breakisLogo.ico" type="image/x-icon">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="assets/css/styles.css">    
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.2-web/css/all.css">
+    <script src="assets/fontawesome-free-5.15.2-web/js/all.js"></script>
+    
+</head>
+
+<!-- Barra de Navegacion-->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white">
+    <a class="navbar-brand" href="index.html">
+        <img src="assets/imagenes/breakiss4.png" alt="" width="100" ></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#clasicos">Clasicos <span class="sr-only">(current)</span>
+        <a class="nav-item nav-link" href="#saludables">Saludables</a>
+        <a class="nav-item nav-link" href="#infantiles">Infantiles</a>
+      </div>
+      <div class="container" id="contenedor-boton">
+        <a href="views/checkout.html">
+          <!--<img src="assets/imagenes/carrito.png " alt="carrito" width="40%" class="icono-carrito"> -->
+      
+         <button type="button" class="btn btn-outline-danger">Tu Pedido</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- SECCION DE PRODUCTOS-->
+  <main class="container">
+    <!-- DESAYUNOS CLASICOS-->
+    <h2 id="clasicos" >Clasicos</h2>
+    <div class="card-deck ">
+      <!-- Card 1 Americano-->
+      <div class="col-md-4 card-area">
+        <div class="card" >
+          <img src="assets/imagenes/classic/desayunos-alrededor-del-mundo-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Americano</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 Panqueques-->
+      <div class="col-md-4 card-area">
+        <div class="card">
+          <img src="assets/imagenes/classic/pancakes.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Panqueques</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero ea consequatur.</p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 Clasico-->
+      <div class="col-md-4 card-area ">
+        <div class="card">
+          <img src="assets/imagenes/Drinks_Coffee_Juice_454719_3840x2400.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Clasico</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero ea.</p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESAYUNOS SALUDABLES-->
+    <h2 id="saludables">Saludables</h2>
+    <div class="card-deck " >
+      <!-- Card 4 Cereales-->
+      <div class="col-md-4 card-area">
+        <div class="card" >
+          <img src="assets/imagenes/healthy/healthy breakfast_bloglarge3.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Cereales</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 Tostadas-->
+      <div class="col-md-4 card-area">
+        <div class="card">
+          <img src="assets/imagenes/healthy/avocado-toast-recipe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Tostadas</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero.</p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 Frutas-->
+      <div class="col-md-4 card-area ">
+        <div class="card">
+          <img src="assets/imagenes/healthy/desayunos-saludables-y-rapidos_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Frutas</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero ea consequatur.</p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESAYUNOS INFANTILES-->
+    <h2 id="infantiles">Infantiles</h2>
+    <div class="card-deck ">
+      <!-- Card 7 Ositos-->
+      <div class="col-md-4 card-area">
+        <div class="card ficha-producto" >
+          <img src="assets/imagenes/kids/kids1.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Ositos</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 Yogurt-->
+      <div class="col-md-4 card-area">
+        <div class="card ficha-producto">
+          <img src="assets/imagenes/kids/Rainbow-Fruit-Yogurt-Breakfast-Bowls-vert4-600x9001.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Yogurt</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 Arcoriris-->
+      <div class="col-md-4 card-area ">
+        <div class="card ficha-producto" >
+          <img src="assets/imagenes/kids/Rainbow-with-Pot-o-Gold-Square-Watermarked.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5>Arcoiris</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <ul class="rating">
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="fas fa-star fa-sm text-primary"></i>
+              </li>
+              <li class="estrellita">
+                <i class="far fa-star fa-sm text-primary"></i>
+              </li>
+            </ul>
+            <hr>
+            <h6 class="mb-3">
+              <span class="text-danger mr-1">$500</span>
+              <span class="text-grey"><s>$680</s></span>
+            </h6>
+            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
+              <i class="fas fa-shopping-cart pr-2"></i>Pedir
+            </button>
+            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> 
+
+  
+<!-- Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<script src="js/main.js"></script>
+
+</body>
+</html>
