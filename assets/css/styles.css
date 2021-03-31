@@ -1,39 +1,77 @@
 /* ESTILOS BASICOS*/
 body {
+  font-family: "Dosis", sans-serif;
+  font-weight: bolder;
   background-color: #fde8cd;
   margin: 0; }
   body h2 {
     color: #DF806F; }
-  body main {
-    padding-top: 10px;
-    margin: 0; }
-  body header {
+  body .carousel-caption {
     padding-bottom: 50px; }
+    body .carousel-caption #titulo-pagina {
+      font-family: "Anton", sans-serif;
+      font-weight: 200px;
+      font-size: 100px;
+      word-spacing: 500%; }
+    body .carousel-caption .banner {
+      font-family: "Dosis", sans-serif;
+      font-size: 50px;
+      word-spacing: 500%; }
 
 #contenedor-boton {
-  padding-left: 70%; }
+  padding-left: 60%; }
 
-.estrellita {
-  display: inline;
-  text-decoration: none; }
+main {
+  padding-top: 50px; }
+  main #contenido-generado {
+    padding-top: 50px; }
+  main .card-deck {
+    padding-bottom: 40px; }
+    main .card-deck .ficha-prodcuto {
+      margin: 5% 0%; }
+      main .card-deck .ficha-prodcuto .div-boton-comprar {
+        padding-left: 38%; }
+      main .card-deck .ficha-prodcuto .rating {
+        padding-left: 0%; }
 
-.card-deck {
-  padding-bottom: 40px; }
-  .card-deck .ficha-prodcuto {
-    margin: 5% 0%; }
-    .card-deck .ficha-prodcuto .div-boton-comprar {
-      padding-left: 38%; }
-    .card-deck .ficha-prodcuto .rating {
-      padding-left: 0%; }
-
-@media (max-width: 1175px) {
+@media (max-width: 2500px) {
   body {
-    margin: 0; } }
+    margin: 0; }
+  #boton-Favoritos {
+    margin-left: 8%; } }
 
-@media (max-width: 989px) {
+@media (max-width: 1200px) {
+  #contenedor-boton {
+    padding-left: 50%; } }
+
+@media (max-width: 992px) {
   #contenedor-boton {
     padding: 1% 0 0 0;
-    margin: 0%; } }
+    margin: 0%; }
+    #contenedor-boton img {
+      width: 7%; }
+    #contenedor-boton #boton-Favoritos {
+      margin-left: 1%; } }
+
+@media (max-width: 700px) {
+  .card-body {
+    padding: 0 1rem 1rem 1rem; }
+  .card-top {
+    padding: 0.7rem 1rem; }
+  #contenedor-boton img {
+    width: 8%; }
+  #contenedor-boton #boton-Favoritos {
+    margin-left: 1%; }
+  #titulo-pagina {
+    display: inline;
+    font-family: "Anton", sans-serif;
+    font-weight: 50px;
+    font-size: 30px;
+    word-spacing: 500%; }
+  .banner {
+    font-family: "Dosis", sans-serif;
+    font-size: 30px;
+    word-spacing: 500%; } }
 
 .card-top {
   padding: 0.7rem 5rem; }
@@ -41,11 +79,9 @@ body {
     float: left;
     margin-top: 0.7rem; }
 
-@media (max-width: 768px) {
-  .card-body {
-    padding: 0 1rem 1rem 1rem; }
-  .card-top {
-    padding: 0.7rem 1rem; } }
+#seccion-checkout {
+  background-color: #FFFFFF;
+  padding-top: 50px; }
 
 .row {
   margin: 0; }
@@ -107,17 +143,3 @@ input:focus::-webkit-input-placeholder {
   -webkit-box-shadow: none;
   -webkit-user-select: none;
   transition: none; }
-
-.btn:hover {
-  color: white; }
-
-a {
-  color: black; }
-
-a:hover {
-  color: black;
-  text-decoration: none; }
-
-input[type=checkbox] {
-  width: unset;
-  margin-bottom: unset; }

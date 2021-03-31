@@ -6,64 +6,118 @@ $color-logo: #DF806F;
 $rosa: #fde8cd;
 $blanco1: #FFFFFF;
 $blanco2: #EDEDED;
+$corazon: #C62828;
+
+$letra1:'Anton', sans-serif;
+$letra2:'Dosis', sans-serif;
 
 
 body {
-  background-color: $rosa;
-  margin: 0;
-  h2 {
-    color: $color-logo;
-  }
-  main {
-    padding-top: 10px;
+    font-family:$letra2;
+    font-weight: bolder;
+    background-color: $rosa;
     margin: 0;
-  }
-  header {
-    padding-bottom: 50px;
+    h2 {
+        color: $color-logo; } 
+    .carousel-caption {
+      padding-bottom: 50px; 
+    #titulo-pagina {
+      font-family: $letra1;
+      font-weight: 200px   ;
+      font-size: 100px;
+      word-spacing: 500%; }
+    .banner {
+      font-family: $letra2;
+      font-size: 50px;
+      word-spacing: 500%;
   }
 }
-//boton carrito
-#contenedor-boton {
-  padding-left: 70%;
-
-  
 }
-
-
 
 
 // ESTILOS INDEX
 
+#contenedor-boton {
+         padding-left: 60%; } 
 
-.estrellita {
-  display: inline;
-  text-decoration: none;
+main {
+    padding-top: 50px;
+    #contenido-generado {
+        padding-top: 50px; }
+    .card-deck {
+        padding-bottom: 40px;
+        .ficha-prodcuto {
+            margin: 5% 0%;
+        .div-boton-comprar {
+            padding-left: 38%; }
+        .rating {
+            padding-left: 0%; }              
+        }
+    
+    }    
 }
 
-.card-deck {
-  padding-bottom: 40px;
-  .ficha-prodcuto {
-  margin: 5% 0%;
-  .div-boton-comprar {
-    padding-left: 38%;
-  }
-  .rating {
-    padding-left: 0%;
-  }
-}
-}
-
-@media (max-width: 1175px) {
+@media (max-width: 1200px) {
   body {
     margin: 0;
   }
+  #boton-Favoritos {
+    margin-left: 8%;
+    }
 }
-@media (max-width: 989px) {
+
+@media (max-width: 1200px) {
+    #contenedor-boton {
+  padding-left: 50%;  
+    }
+}
+
+@media (max-width: 992px) {
   #contenedor-boton {
     padding: 1% 0 0 0;
     margin: 0%;
-  }	
+    img {
+    width: 7%; } 
+    #boton-Favoritos {
+        margin-left:1% ;}
+        
+    }	 
+     
+    }
+
+
+@media (max-width:700px) {
+ 
+    .card-body {
+        padding: 0 1rem 1rem 1rem;
+    }
+    .card-top {
+        padding: 0.7rem 1rem;
+    }
+    #contenedor-boton {
+        img {
+        width: 8%; }
+        #boton-Favoritos {
+            margin-left:1%;
+        }
+
+    }
+
+
+
+    #titulo-pagina {
+        display: inline;
+        font-family: $letra1;
+        font-weight: 50px   ;
+        font-size: 30px;
+        word-spacing: 500%; }
+      .banner {
+        font-family: $letra2;
+        font-size: 30px;
+        word-spacing: 500%;
+    }
 }
+
 //ESTILOS CHECKOUT
 
 // .card {
@@ -79,22 +133,11 @@ body {
     }
 }
 
-
-// .card-body {
-//     padding: 0 5rem 5rem 5rem;
-  
-//     background-size: cover;
-//     background-repeat: no-repeat
-// }
-
-@media(max-width:768px) {
-    .card-body {
-        padding: 0 1rem 1rem 1rem
-    }
-    .card-top {
-        padding: 0.7rem 1rem
-    }
+#seccion-checkout {
+    background-color: $blanco1;
+    padding-top: 50px;
 }
+
 
 .row {
     margin: 0
@@ -172,23 +215,4 @@ input:focus::-webkit-input-placeholder {
     -webkit-user-select: none;
     transition: none
 }
-
-.btn:hover {
-    color: white
-}
-
-a {
-    color: black
-}
-
-a:hover {
-    color: black;
-    text-decoration: none
-}
-
-input[type=checkbox] {
-    width: unset;
-    margin-bottom: unset
-}
-
 
