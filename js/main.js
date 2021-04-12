@@ -10,20 +10,27 @@ let contSubtotal = document.querySelector("#subtotal");
 let contTotal = document.querySelector("#total"); 
 
 
+
 //  EVENTO PARA CONTROLAR QUE LA PAGINA SE HAYA CARGADO EN SU TOTALIDAD ---------------
 $(document).ready(function() {
   generarProductosIndex(listaProductos);
   generarSecciones()
   COMPRA(listaProductos);
-  FAVORITOS(listaProductos);  
+  FAVORITOS(listaProductos); 
+  calcSubtotal();
+  salidaCarritoCheckout(carrito);
+  salidaCarritoModal();  
+  itemsCarrito.innerHTML = carrito.length;  
 });
+
+
 
 //  GENERANDO CONTENIDO HTML DE MANERA DINAMICA: SECCION PRODUCTOS TOTALES INDEX---------
 function generarProductosIndex(lista) {        
   for (const producto of lista) {       
     let contPadre = document.querySelector("#contenido-generado");
     let contHijo = document.createElement("div");  
-    contHijo.innerHTML = `<div class="container">
+    contHijo.innerHTML = `<div class="container product">
                             <div class="card-deck">
                               <div class="col-lg-8 card-area">
                                 <div class="card" style="width:18rem" id="ficha">
@@ -63,6 +70,7 @@ $("#contenido-generado").hide()
                         .delay(2000)
                         .fadeIn(2000)
 
+
                     
 //  AGRUPANDO PRODUCTOS POR CATEGORIA EN LAS "DIFERENTES" SECCIONES---------------------
 function generarSecciones() {
@@ -80,8 +88,7 @@ clasicos.onclick = () => {
                 .fadeIn(2000);  
    generarProductosIndex(listaClasicos) 
    COMPRA(listaClasicos)
-   FAVORITOS(listaClasicos);
-  
+   FAVORITOS(listaClasicos);  
 }  
 let saludables = document.querySelector("#seccion-saludables");
 let listaSaludables = listaProductos.slice(3,6)
@@ -97,8 +104,7 @@ saludables.onclick = () => {
                 .fadeIn(2000); 
    generarProductosIndex(listaSaludables)
    COMPRA(listaSaludables)
-   FAVORITOS(listaSaludables);
- 
+   FAVORITOS(listaSaludables); 
 }
 let infantiles = document.querySelector("#seccion-infantiles");
 let listaInfantiles = listaProductos.slice(-3)
@@ -118,23 +124,24 @@ infantiles.onclick = () => {
 }
 }  
 
+
+
 //   CARRITO DE COMPRAS----------------------------------------------------------
 function COMPRA(lista) {
   for (const boton of lista) {
     let botonPedir = document.getElementById(boton.id); 
     botonPedir.onclick = () => {
       boton.vender(); 
-      agregarAlCarrito(boton);
-      boton.multiplicarCant();         
+      agregarAlCarrito(boton);             
       calcSubtotal(); 
-      guardarStorage();       
+      guardarCarrito();       
       salidaCarritoCheckout(carrito);  
       $("#modalCarrito").prepend(salidaCarritoModal());            
     }
   }
 }
 
- // ingreso productos al carrito mediante método push
+ // Ingreso productos al carrito mediante método push
 function agregarAlCarrito(producto) {  
   let yaAgregado = carrito.find(elemento => elemento == producto); 
   if (yaAgregado) {  
@@ -150,10 +157,10 @@ function agregarAlCarrito(producto) {
 function calcSubtotal () { 
   subtotal = carrito.reduce(function (total, actual) {
   return total + actual.cantidad * actual.precio;  
-  },0);
+  },0);  
 }
 
-// salida del carrito en Checkout  
+// Salida carrito Checkout  
 function salidaCarritoCheckout(lista) {    
   html = "";  
   for (const el of lista) {   
@@ -162,7 +169,7 @@ function salidaCarritoCheckout(lista) {
                <img src="${el.imagen}" alt="Card image cap" width="70px">
                <span>${el.nombre} x${el.cantidad}</span>
               </div>          
-              <div class="col text-right">$ ${el.multiplicarCant()}</div>                      
+              <div class="col text-right">$ ${el.precio * el.cantidad}</div>                      
             </div>`;   
     contCarritoPadre.innerHTML = html; 
   } 
@@ -170,19 +177,19 @@ function salidaCarritoCheckout(lista) {
   contTotal.innerHTML = `$ ${subtotal}`; 
 }
 
-// salida del carrito en Modal   
+// Salida carrito Modal   
 function salidaCarritoModal() { 
   html = "";
   for (const el of carrito) {
-     html +=  `<div class="col-md-5"> ${el.nombre} </div>
-               <div class="col-md-4"> Cant: ${el.cantidad} </div>
-               <div class="col-md-3"> $ ${el.multiplicarCant()} </div>         
+     html +=  `<div class="col-11 col-md-5"> ${el.nombre} </div>
+               <div class="col-5 col-md-4"> Cant: ${el.cantidad} </div>
+               <div class="col-3 col-md-3"> $ ${el.precio * el.cantidad} </div>         
               `;         
      contModal.innerHTML = html;   
   }
   $("#total-carrModal").html("Total: $ " + subtotal); 
-  // vaciar carrito
-  $("#vaciarCarrito").click(() => { 
+  // Vaciar carrito
+  $(".vaciarCarrito").click(() => { 
     carrito = [];
     contModal.innerHTML = "";
     totalModal.innerHTML = "";
@@ -190,8 +197,10 @@ function salidaCarritoModal() {
     contCarritoPadre.innerHTML = "";
     contSubtotal.innerHTML = "$ 0";
     contTotal.innerHTML = "$ 0";
+    borrarCarritoGuardado();
   })
 }
+
 
 
 //  LISTA DE FAVORITOS  -----------------------------------------------------
@@ -207,6 +216,7 @@ function FAVORITOS(lista) {
   }
 }
 
+//  Agregar a favoritos
 function agregarFavoritos(producto) {  
   let yaFav = favoritos.find(elemento => elemento == producto); 
   if (yaFav) {
@@ -216,7 +226,8 @@ function agregarFavoritos(producto) {
     favoritos.push(producto)
   }  
 } 
-// salida del Fvoritos en Modal
+
+// salida favoritos Modal
 function salidaFavoritos() {
   let contLista = document.querySelector("#listaFav")
   html = "";
@@ -236,25 +247,28 @@ function salidaFavoritos() {
 }
 
 
+
 //  STORAGE  --------------------------------------------------------------------
-function guardarStorage () {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-};
+// Guardar en Storage
+function guardarCarrito() {
+  localStorage.setItem("carritoGuardado", JSON.stringify(carrito)); 
+}
 
-  let carritoGuardado = localStorage.getItem("carrito");
-  let carritoParse = JSON.parse(carritoGuardado);
-  
-    //salidaCarritoCheckout(carritoParse) 
-    
+// Cargando los productos guardados al carrito
+function recuperarCarrito() {
+  carrito = JSON.parse(localStorage.getItem("carritoGuardado"));
+}  
+if (localStorage.getItem("carritoGuardado") != null) {
+  recuperarCarrito();
+  console.log(carrito)
+}
 
-function traerStorage(carrito) {
-    //console.log("habias agregado a tu carrito: " + JSON.stringify(element.nombre))
-    //return carritoParse
+// Eliminar del Storage
+function borrarCarritoGuardado() {
+  localStorage.removeItem("carritoGuardado")
+}
 
-    console.log(carritoParse)  
-  
-};
-traerStorage(carritoParse)
+
 
 //  FORMULARIO -------------------------------------------------------------------
 $(document).ready(function() {  
@@ -278,14 +292,20 @@ $("form").submit(function (e) {
         data: objCreadoForm,
         success: function(respuesta){  $("form").prepend
            (`
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                 <div class="modal-content" ">
-                    <h2>Pedido realizado con exito ${respuesta.nombre} </h2>
-                 </div>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content" ">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pedido realizado con exito </h5>
+                  </div>
+                  <div class="modal-body"> 
+                    <p>Recibirás tu pedido en ${respuesta.direccion}</p>
+                    <h2>Gracias por tu compra!</h2>
+                  </div>
                 </div>
               </div>
-              <div></div>`);                          
+            </div>        
+          `);                          
          }
       });
     });
@@ -296,6 +316,3 @@ $(".checkout").hide()
 
 });
 
-
- 
-  

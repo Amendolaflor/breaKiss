@@ -24,7 +24,8 @@ body {
 main {
   padding-top: 50px; }
   main #contenido-generado {
-    padding-top: 50px; }
+    padding-top: 50px;
+    justify-content: center; }
   main .card-deck {
     padding-bottom: 40px; }
     main .card-deck .ficha-prodcuto {
@@ -34,7 +35,7 @@ main {
       main .card-deck .ficha-prodcuto .rating {
         padding-left: 0%; }
 
-@media (max-width: 2500px) {
+@media (max-width: 1200px) {
   body {
     margin: 0; }
   #boton-Favoritos {
@@ -141,5 +142,4 @@ input:focus::-webkit-input-placeholder {
   box-shadow: none;
   color: white;
   -webkit-box-shadow: none;
-  -webkit-user-select: none;
   transition: none; }

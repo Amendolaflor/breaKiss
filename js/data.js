@@ -107,13 +107,7 @@ class Desayuno {
     }
     vender() {
       this.vendido = true;
-    }
-    multiplicarCant() {
-      return this.precio * this.cantidad;
-    }
-  
-    
-    
+    }    
 }
 
 //  CREANDO OBJETOS DESDE INFORMACION ESTATICA ------------------------------
@@ -127,9 +121,7 @@ for (let i = 0; i < 9; i++) {
 
 //  CARRITO -----------------------------------------------------------------
 
-let carrito = [
-  //metodo cargar carrito
-];
+let carrito = [];
 
 
 // LISTA DE FAVORITOS -------------------------------------------------------

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
+
 <!-- Barra de Navegacion-->
 <header class="sticky-top">
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white">
@@ -55,16 +56,16 @@
         </div>   
         <hr>    
         <div class="row">
-          <div class="col-md-4 ml-auto" id="total-carrModal"> 
+          <div class="col-11 col-md-4 ml-auto" id="total-carrModal"> 
             <span class="total-cart" ></span>
           </div>
         </div>
       </div>
       <div class="modal-footer">  
         <button type="button" class="btn btn-light" data-dismiss="modal">Cerrar</button>
-        <img src="assets/imagenes/delete.png" alt="carrito" width="7%" id="vaciarCarrito">      
+        <img src="assets/imagenes/delete.png" alt="carrito" width="7%" class="vaciarCarrito">      
         <a href="#/seccion-checkout">
-          <button type="button" class="btn btn-primary">Ir al pago</button>
+          <button type="button" class="btn btn-primary" id="btn-irPago">Ir al pago</button>
         </a>
       </div>      
     </div>
@@ -96,8 +97,8 @@
     </div>
   </div>
 </div> 
-<!-- CAROUSEL DE FOTOS-->
 
+<!-- CAROUSEL DE FOTOS-->
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-interval="3000">
@@ -131,8 +132,7 @@
   </a>
 </div>
 
-<!-- SECCION DE PRODUCTOS-->
-  
+<!-- SECCION DE PRODUCTOS-->  
 <main class="container main">
   <h2>Nuestros Desayunos</h2>
   <div class="row" id ="contenido-generado">
@@ -182,6 +182,10 @@
                   <div class="col text-right"><a href="index.html"><img src="assets/imagenes/sumaralcarrito.png" alt="carrito" width="15%"></a></div>
               </div>
               <div class="row lower">
+                <div class="col text-left">Vaciar carrito</div>
+                <div class="col text-right"><img src="assets/imagenes/delete.png" alt="carrito" width="20%" class="vaciarCarrito"></div>
+            </div>
+              <div class="row lower">
                   <div class="col text-left"><b>Total</b></div>
                   <div class="col text-right" id="total"><b>$ 0</b></div>
               </div>
@@ -193,8 +197,6 @@
       </div>
   </div>
 </div>
-
-
 
 
 <!-- Bootstrap-->

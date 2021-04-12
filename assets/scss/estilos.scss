@@ -43,7 +43,10 @@ body {
 main {
     padding-top: 50px;
     #contenido-generado {
-        padding-top: 50px; }
+        padding-top: 50px;
+        justify-content: center;
+        
+     }
     .card-deck {
         padding-bottom: 40px;
         .ficha-prodcuto {
@@ -63,7 +66,7 @@ main {
   }
   #boton-Favoritos {
     margin-left: 8%;
-    }
+    }      
 }
 
 @media (max-width: 1200px) {
@@ -79,12 +82,9 @@ main {
     img {
     width: 7%; } 
     #boton-Favoritos {
-        margin-left:1% ;}
-        
-    }	 
-     
-    }
-
+        margin-left:1% ;}        
+    }	      
+}
 
 @media (max-width:700px) {
  
@@ -100,10 +100,7 @@ main {
         #boton-Favoritos {
             margin-left:1%;
         }
-
     }
-
-
 
     #titulo-pagina {
         display: inline;
@@ -117,13 +114,6 @@ main {
         word-spacing: 500%;
     }
 }
-
-//ESTILOS CHECKOUT
-
-// .card {
-//     max-width: 1000px;
-//     margin: 2vh
-// }
 
 .card-top {
     padding: 0.7rem 5rem;
@@ -212,7 +202,7 @@ input:focus::-webkit-input-placeholder {
     box-shadow: none;
     color: white;
     -webkit-box-shadow: none;
-    -webkit-user-select: none;
+    
     transition: none
 }
 
